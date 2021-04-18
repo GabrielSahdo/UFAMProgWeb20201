@@ -1,0 +1,26 @@
+body {
+    background-color: #1b1b3b;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-image: url(imgs/via_lactea.jpg);
+    background-repeat: no-repeat;
+    background-size: 80vw;
+    background-position: 50% 0;
+}
+
+
+.caixa {
+    width: 30vw;
+    padding: 1em;
+    position: relative;
+    top: 100px;
+    right: -170px;
+    background-color: #9999ccd8;
+    border: 10px solid #CC9966;
+    border-radius: 10px;
+    transition: transform 0.4s;
+}
+
+.caixa:hover {
+    transform: scale(1.1);
+}
