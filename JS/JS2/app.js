@@ -37,7 +37,7 @@ function perdeu() {
 }
 
 function jogada_valida(jogada) {
-    if (escolhas[jogada] == false) {
+    if (escolhas[jogada] == null) {
         console.log("Por favor escolha um número válido da próxima vez (pois essa aqui já era)!");
         flag = false;
         return false;
