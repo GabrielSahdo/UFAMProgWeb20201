@@ -1,9 +1,63 @@
-<html lang="pt-br">
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <title>Snake Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
-    {{{body}}}
+    <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+      <div class="container">
+        <a href="/index" class="navbar-brand myNavBarTittle">Snake Game</a>
+        <div class="myNavBarDiv">
+          <ul class="myNavBarList">
+            <li class="myNavBarItem">
+              <a href="/about"><i class="fas fa-question"></i></a>
+            </li>
+            <li class="myNavBarItem">
+              <a href="/game"><i class="fas fa-gamepad"></i></a>
+            </li>
+            <li class="myNavBarItem">
+              <a href="/ui"><i class="fas fa-grip-horizontal"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container main">
+
+      {{{body}}}
+
+      <footer id="footer">
+        <div class="row">
+          <div class="col-sm-12">
+            <ul class="list-unstyled footer-options">
+              <li class="backtotop"><a href="#top">Back to top</a></li>
+              <li><a href="https://github.com/gabrielsahdo"><i
+                    class="fab fa-github-alt"
+                  ></i>  GitHub</a></li>
+              <li><a href="https://codepen.com/gabrielsahdo"><i
+                    class="fab fa-codepen"
+                  ></i>  Codepen</a></li>
+              <li><a href="https://www.linkedin.com/in/gabrielsahdo/"><i
+                    class="fab fa-linkedin"
+                  ></i>  Linkedin</a></li>
+            </ul>
+            <p>Made by Gabriel Sahdo :D</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
   </body>
 </html>
