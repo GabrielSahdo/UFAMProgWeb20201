@@ -1,7 +1,7 @@
-about = (req, res) =>
-    res.render("main/about");
+about = (req, res) => res.render("main/about");
 
-ui = (req, res) => 
-    res.render("main/ui");
+ui = (req, res) => res.render("main/ui");
 
-module.exports = { about, ui };
+game = (req, res) => res.render("main/game");
+
+module.exports = { about, ui, game };

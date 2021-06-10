@@ -25,6 +25,7 @@ app.use("/js", [
     express.static(__dirname + '/node_modules/jquery/dist/'),
     express.static(__dirname + '/node_modules/popper.js/dist/umd'),
     express.static(__dirname + '/node_modules/bootstrap/dist/js'),
+    express.static(__dirname + '/public/js'),
 ]);
 
 

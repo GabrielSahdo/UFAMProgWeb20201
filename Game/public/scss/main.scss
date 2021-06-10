@@ -29,13 +29,14 @@
   transition: all 200ms ease !important;
 }
 
-.myNavBarItem > a > i:hover, .myNavBarItem > a > i:focus {
+.myNavBarItem > a > i:hover,
+.myNavBarItem > a > i:focus {
   transform: scale(1.2) rotate(-10deg);
   color: deeppink;
 }
 
 .myNavBarItem > a > i:active {
-    transform: scale(0.9);
+  transform: scale(0.9);
 }
 
 .myNavBarTittle {
@@ -147,4 +148,13 @@ p {
 
 .main-content {
   margin: 3em 0;
+}
+
+.snake-game-img {
+  max-height: 40vh;
+}
+
+.myCenterContent {
+  display: grid;
+  place-items: center;
 }
