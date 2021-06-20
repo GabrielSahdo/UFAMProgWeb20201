@@ -9,15 +9,18 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       sigla: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       nome: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       descricao: {
         type: Sequelize.STRING
       },
       areaId: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
       createdAt: {

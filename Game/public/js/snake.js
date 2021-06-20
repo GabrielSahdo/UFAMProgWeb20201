@@ -256,13 +256,13 @@
   }
 
   function end() {
-    window.clearInterval(interval);
-
+    
     modal = document.querySelector("#myModal");
-    texto = document.querySelector("#texto");
-
+    texto = document.querySelector("#pauseText");
+    
     modal.style.display = "block";
     texto.textContent = "Game Over";
+    window.clearInterval(interval);
   }
 
   init();
