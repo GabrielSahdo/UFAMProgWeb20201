@@ -1,0 +1,220 @@
+
+.navbar {
+  opacity: 0.8 !important;
+}
+
+.main {
+  margin-top: 8rem !important;
+}
+
+.myNavBarList {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 2rem;
+  list-style-type: none;
+}
+
+.myNavBarItem > a > i {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: darkorchid;
+  transition: all 200ms ease !important;
+}
+
+.myNavBarItem > a > i:hover,
+.myNavBarItem > a > i:focus {
+  transform: scale(1.2) rotate(-10deg);
+  color: deeppink;
+}
+
+.myNavBarItem > a > i:active {
+  transform: scale(0.9);
+}
+
+.myNavBarTittle {
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 2rem;
+  color: deeppink !important;
+  transition: all 200ms ease;
+  position: relative;
+}
+
+.myNavBarTittle::after {
+  content: "";
+  position: absolute;
+  bottom: 10;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: darkorchid;
+  transition: 200ms ease-in-out;
+
+  transform: scale(0);
+  opacity: 0;
+}
+
+.myNavBarTittle:hover::after {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.myNavBarTittle:hover {
+  color: darkorchid !important;
+}
+
+body {
+  background-color: var(--background-color);
+  color: #809294;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #212529;
+  opacity: 0.8;
+  height: 25%;
+  margin: 0 10rem;
+  margin-top: 5rem;
+
+  border-top-left-radius: 4rem;
+  border-top-right-radius: 4rem;
+}
+
+footer a {
+  color: deeppink;
+  text-decoration: none;
+}
+
+footer p {
+  bottom: 0;
+  padding-left: 3rem;
+}
+
+.footer-options {
+  padding-top: 2em;
+  padding-left: 5em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer-options .backtotop {
+  align-self: flex-end !important;
+  padding-right: 5em;
+}
+
+.footer-options li {
+  font-size: 1.2em;
+  position: relative;
+  animation: all 1000ms ease;
+}
+
+.footer-options li a i {
+  padding-right: 0.5em;
+}
+
+h1 {
+  color: var(--main-text-color);
+  font-family: "Do Hyeon", sans-serif;
+  margin-bottom: 3rem;
+  font-size: 4em;
+}
+h1 > i {
+  color: var(--secondary-text-color);
+}
+
+p {
+  font-size: 1.2em;
+}
+
+.main-content {
+  margin: 3em 0;
+}
+
+.snake-game-img {
+  max-height: 40vh;
+}
+
+.myCenterContent {
+  display: grid;
+  place-items: center;
+}
+
+.flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+
+.flex > * {
+  flex-grow: 1;
+}
+
+
+.formElement > *{
+  display: block;
+}
+
+.formElement > input {
+  height: 4rem;
+}
+
+.formElement > input ,.formElement > textarea  {
+  width: 100%;
+}
+
+form > * {
+  margin: 2rem 0;
+}
+
+form {
+  font-size: 1.5rem;
+}
+
+.btnPrincipal {
+  width: 15rem;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: var(--main-text-color);
+  border: none;
+  border-radius: 2rem;
+
+  padding: 1rem 2.5rem;
+
+  transition: all 150ms linear;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.btnAdicionar::after {
+  content: '\f067';
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 700;
+  position: absolute;
+  margin-left: 0.5rem;
+
+  transform: translateX(200%);
+  transition: all 200ms linear;
+}
+
+.btnAdicionar:hover, .btnPrincipal:active {
+  background-color: var(--secondary-text-color);
+  color: #fff;
+
+  padding-left: 1.5rem;
+  padding-right: 3.5rem;
+}
+
+.btnAdicionar:hover::after , .btnAdicionar:active::after  {
+  transform: translateX(0);
+}

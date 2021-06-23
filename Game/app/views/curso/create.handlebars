@@ -1,0 +1,49 @@
+<h1>Adicionar Curso</h1>
+
+<form action="/curso/create" method="post">
+  <div class="flex">
+    <div class="formElement">
+      <label for="sigla">Sigla</label>
+      <input type="text" placeholder="Escolha uma sigla" id="sigla" name="sigla">
+      <small>Qualquer dúvida acesse o Ecampus.</small>
+    </div>
+
+    <div class="formElement">
+      <label for="nome">Nome do curso</label>
+      <input type="text" id="nome" name="nome">
+    </div>
+  </div>
+
+
+  <div class="formElement">
+    <label for="descricao">Descrição do curso</label>
+    <textarea name="descricao" id="descricao" rows="3"></textarea>
+  </div>
+
+  <fieldset class="formElement">
+    <legend class="mt-4">Área da Ciência</legend>
+      <div class="form-check">
+        <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="area" id="area" value="1" checked="">
+          Ciências Exatas
+        </label>
+      </div>
+      
+      <div class="form-check">
+        <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="area" id="area" value="2">
+          Ciências Humanas
+        </label>
+      </div>
+      
+      <div class="form-check">
+        <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="area" id="area" value="3">
+          Ciências Biológicas
+        </label>
+      </div>
+  </fieldset>
+
+  <button type="submit" class="btnPrincipal btnAdicionar">Adicionar</button>
+
+</form>

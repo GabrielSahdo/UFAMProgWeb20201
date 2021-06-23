@@ -30,6 +30,7 @@ app.use("/js", [
 
 
 app.use(logger("combined"));
+app.use(express.urlencoded({ extended: false }));
 app.use(router);
 
 app.listen(3000, function () {
