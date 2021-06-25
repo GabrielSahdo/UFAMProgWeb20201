@@ -1,0 +1,28 @@
+<h1>Curso</h1>
+
+<div class="flexCenter">
+  <table id="tableCursos">
+    <thead>
+      <tr>
+        <th>Sigla</th>
+        <th>Nome</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each cursos}}
+        <tr>
+          <td>{{sigla}}</td>
+          <td>{{nome}}</td>
+          <td>
+              <div class="flexEnd">
+                <a href="/curso/{{id}}"><i class="far fa-eye"></i></a>
+                <a href="/curso/update/{{id}}"><i class="fas fa-pencil-alt"></i></a>
+                <a href="/curso/remove/{{id}}"><i class="far fa-trash-alt"></i></a>
+              </div>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

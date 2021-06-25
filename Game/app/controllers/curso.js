@@ -2,12 +2,16 @@
 const models = require('../models/index');
 const Curso = models.Curso;
 
-async function index(req, res) { };
-async function create(req, res) {
-  console.log(req.route.methods.get);
+async function index(req, res) {
+  const cursos = await Curso.findAll();
+  res.render("curso/index", {
+    cursos: cursos.map(curso => curso.toJSON())
+  });
+};
 
-  if (req.route.methods.get) { 
-    res.render("curso/create") 
+async function create(req, res) {
+  if (req.route.methods.get) {
+    res.render("curso/create")
   } else {
     await Curso.create({
       sigla: req.body.sigla,
@@ -17,11 +21,16 @@ async function create(req, res) {
     });
 
     res.redirect("/");
-
-
   }
 };
-async function read(req, res) { };
+
+async function read(req, res) {
+  const curso = await Curso.findOne({ where: { id: req.params.id } })
+
+  res.render("curso/read", {
+    curso: curso.toJSON()
+  })
+};
 async function update(req, res) { };
 async function remove(req, res) { };
 

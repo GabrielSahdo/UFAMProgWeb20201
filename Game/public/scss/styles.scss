@@ -1,4 +1,3 @@
-
 .navbar {
   opacity: 0.8 !important;
 }
@@ -80,8 +79,7 @@ footer {
   margin: 0 10rem;
   margin-top: 5rem;
 
-  border-top-left-radius: 4rem;
-  border-top-right-radius: 4rem;
+  border-radius: 4rem;
 }
 
 footer a {
@@ -158,8 +156,7 @@ p {
   flex-grow: 1;
 }
 
-
-.formElement > *{
+.formElement > * {
   display: block;
 }
 
@@ -167,7 +164,8 @@ p {
   height: 4rem;
 }
 
-.formElement > input ,.formElement > textarea  {
+.formElement > input,
+.formElement > textarea {
   width: 100%;
 }
 
@@ -192,29 +190,122 @@ form {
   transition: all 150ms linear;
   position: relative;
   overflow: hidden;
+
+  &::after {
+    content: "\f067";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    position: absolute;
+    margin-left: 0.5rem;
+
+    transform: translateX(200%);
+    transition: all 200ms linear;
+  }
+
+  &:hover,
+  &:active {
+    background-color: var(--secondary-text-color);
+    color: #fff;
+
+    padding-left: 1.5rem;
+    padding-right: 3.5rem;
+
+    &::after {
+      transform: translateX(0);
+    }
+  }
 }
 
+.flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-
-.btnAdicionar::after {
-  content: '\f067';
-  font-family: "Font Awesome 5 Free"; 
-  font-weight: 700;
-  position: absolute;
-  margin-left: 0.5rem;
-
-  transform: translateX(200%);
-  transition: all 200ms linear;
+  gap: 1rem;
 }
 
-.btnAdicionar:hover, .btnPrincipal:active {
-  background-color: var(--secondary-text-color);
-  color: #fff;
+.flexEnd {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 
-  padding-left: 1.5rem;
-  padding-right: 3.5rem;
+  gap: 1rem;
 }
 
-.btnAdicionar:hover::after , .btnAdicionar:active::after  {
-  transform: translateX(0);
+#tableCursos {
+  font-size: 1.5rem;
+  width: 80%;
+
+  border: 1px solid white;
+
+  th {
+    padding: 0.5rem 1rem;
+    background-color: var(--main-text-color);
+    color: black;
+  }
+
+  td {
+    border: 1px solid white;
+    padding: 0.5rem 1rem;
+
+    a {
+      color: var(--secondary-text-color);
+
+      &:hover {
+        color: var(--main-text-color);
+      }
+    }
+  }
+
+  & td:nth-of-type(2) {
+    border-right: none;
+  }
+
+  & td:last-of-type {
+    border-left: none;
+  }
+}
+
+.flexCenterColumn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.tableHead {
+  width: 60%;
+  padding: 0.5rem 1rem;
+  padding-left: 3rem;
+  font-size: 2rem;
+  background-color: var(--main-text-color);
+  color: black;
+  font-weight: bold;
+  border: 2px solid lightgray;
+  border-bottom: none;
+}
+
+#tableRead {
+  width: 60%;
+  td,
+  th {
+    border: 2px solid lightgray;
+    padding: 0.75rem 1rem;
+  }
+
+  th {
+    text-align: end;
+    padding-right: 5rem;
+    width: 50%;
+    border-right: none;
+    font-size: 1.5rem;
+    color: var(--secondary-text-color);
+  }
+
+  td {
+    text-align: start;
+    padding-left: 5rem;
+    border-left: none;
+    font-size: 1.3rem;
+  }
 }
