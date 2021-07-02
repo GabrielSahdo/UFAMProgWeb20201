@@ -1,0 +1,91 @@
+<h1>Update Curso</h1>
+
+<form action="/curso/update/{{curso.id}}" method="post">
+  <input type="hidden" name="id" value="{{curso.id}}" />
+  <input type="hidden" name="_csrf" value="{{csrf}}" />
+
+  <div class="flex">
+    <div class="formElement">
+      <label for="sigla">Sigla</label>
+      <input
+        type="text"
+        placeholder="Escolha uma sigla"
+        id="sigla"
+        value="{{curso.sigla}}"
+        name="sigla"
+        required
+      />
+      <small>Qualquer dúvida acesse o Ecampus.</small>
+      <div class="invalid-feedback">{{printError errors "sigla"}}</div>
+    </div>
+
+    <div class="formElement">
+      <label for="nome">Nome do curso</label>
+      <input
+        type="text"
+        id="nome"
+        name="nome"
+        value="{{curso.nome}}"
+        required
+      />
+      <div class="invalid-feedback">{{printError errors "nome"}}</div>
+    </div>
+  </div>
+
+  <div class="formElement">
+    <label for="descricao">Descrição do curso</label>
+    <textarea
+      name="descricao"
+      id="descricao"
+      rows="3"
+    >{{curso.descricao}}</textarea>
+  </div>
+
+  <fieldset class="formElement">
+    <legend class="mt-4">Área da Ciência</legend>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input
+          type="radio"
+          class="form-check-input"
+          name="areaId"
+          id="areaId"
+          value="1"
+          {{checked curso.areaId 1}}
+        />
+        Ciências Exatas
+      </label>
+    </div>
+
+    <div class="form-check">
+      <label class="form-check-label">
+        <input
+          type="radio"
+          class="form-check-input"
+          name="areaId"
+          id="areaId"
+          value="2"
+          {{checked curso.areaId 2}}
+        />
+        Ciências Humanas
+      </label>
+    </div>
+
+    <div class="form-check">
+      <label class="form-check-label">
+        <input
+          type="radio"
+          class="form-check-input"
+          name="areaId"
+          id="areaId"
+          value="3"
+          {{checked curso.areaId 3}}
+        />
+        Ciências Biológicas
+      </label>
+    </div>
+  </fieldset>
+
+  <button type="submit" class="btnPrincipal btnUpdate">Update</button>
+
+</form>

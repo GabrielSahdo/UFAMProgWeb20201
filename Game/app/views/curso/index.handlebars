@@ -1,6 +1,8 @@
 <h1>Curso</h1>
 
-<div class="flexCenter">
+<div class="containerCursoIndex">
+  <a class="buttonCell" href="/curso/create"><i class="fas fa-plus"></i></a>
+
   <table id="tableCursos">
     <thead>
       <tr>
@@ -15,11 +17,20 @@
           <td>{{sigla}}</td>
           <td>{{nome}}</td>
           <td>
-              <div class="flexEnd">
-                <a href="/curso/{{id}}"><i class="far fa-eye"></i></a>
-                <a href="/curso/update/{{id}}"><i class="fas fa-pencil-alt"></i></a>
-                <a href="/curso/remove/{{id}}"><i class="far fa-trash-alt"></i></a>
-              </div>
+            <div class="flexEnd">
+              <a href="/curso/{{id}}"><i
+                  class="far fa-eye"
+                  title="Detalhes"
+                ></i></a>
+              <a href="/curso/update/{{id}}"><i
+                  class="fas fa-pencil-alt"
+                  title="Editar"
+                ></i></a>
+              <a href="/curso/remove/{{id}}"><i
+                  class="far fa-trash-alt"
+                  title="Remover"
+                ></i></a>
+            </div>
           </td>
         </tr>
       {{/each}}

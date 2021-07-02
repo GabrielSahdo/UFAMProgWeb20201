@@ -178,14 +178,14 @@ form {
 }
 
 .btnPrincipal {
-  width: 12rem;
+  width: 11rem;
   font-size: 1.5rem;
   font-weight: bold;
   background-color: var(--main-text-color);
   border: none;
   border-radius: 2rem;
 
-  padding: 1rem 2.5rem;
+  padding: 1rem 2.3rem;
 
   transition: all 150ms linear;
   position: relative;
@@ -307,5 +307,39 @@ form {
     padding-left: 5rem;
     border-left: none;
     font-size: 1.3rem;
+  }
+}
+
+.containerCursoIndex {
+  width: 80%;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  gap: 1rem;
+}
+
+.buttonCell {
+  display: grid;
+  place-items: center;
+
+  background-color: var(--main-text-color);
+
+  width: 2.5rem;
+  height: 2.5rem;
+
+  border-radius: 50%;
+  text-decoration: none;
+  color: #212529;
+
+  font-size: 1.4rem;
+
+  transition: all 150ms linear;
+
+  &:hover {
+    background-color: var(--secondary-text-color);
+    color: white;
   }
 }
