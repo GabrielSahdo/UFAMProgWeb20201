@@ -1,10 +1,10 @@
 <h1>Adicionar Curso</h1>
 
-<form action="/curso/create" method="post">
+<form action="/curso/create" method="post" class="containerCursoCreate">
 
-  <input type="hidden" name="_csrf" value="{{csrf}}">
+  <input type="hidden" name="_csrf" value="{{csrf}}" />
 
-  <div class="flex">
+  <div class="flexLine">
     <div class="formElement">
       <label for="sigla">Sigla</label>
       <input
@@ -71,6 +71,6 @@
     </div>
   </fieldset>
 
-  <button type="submit" class="btnPrincipal btnAdicionar">Adicionar</button>
+  <button type="submit" class="btnPrincipal btnCreate">Adicionar</button>
 
 </form>

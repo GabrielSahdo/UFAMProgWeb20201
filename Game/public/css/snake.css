@@ -1,5 +1,5 @@
 #gameWrapper {
-    padding-block: 8em; /* nova feature do css :D */
+  padding-block: 8em; /* nova feature do css :D */
 }
 
 #board {
@@ -15,9 +15,9 @@
 }
 
 #info-text {
-  color: mediumvioletred;
+  color: #9381ff;
   font-size: 2rem;
-  font-family: "Press Start 2P", cursive;
+  font-family: "Do Hyeon", sans-serif;
   cursor: default;
 }
 
